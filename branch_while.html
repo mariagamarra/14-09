@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ordenação Decrescente</title>
+</head>
+<body>
+    <h1>Ordenação Decrescente</h1>
+    <p>Matriz de números desordenados:</p>
+    <ul id="numeros-desordenados">
+        <li>9</li>
+        <li>3</li>
+        <li>7</li>
+        <li>1</li>
+        <li>5</li>
+    </ul>
+    
+    <p>Matriz de números ordenados em ordem decrescente:</p>
+    <ul id="numeros-ordenados">
+    </ul>
+
+    <script>
+        // Matriz de números desordenados
+        const numerosDesordenados = [9, 3, 7, 1, 5];
+
+        // Função para ordenar em ordem decrescente
+        function ordenarDecrescente(arr) {
+            let n = arr.length;
+            let ordenado = false;
+
+            while (!ordenado) {
+                ordenado = true;
+                for (let i = 0; i < n - 1; i++) {
+                    if (arr[i] < arr[i + 1]) {
+                        // Troca os números se estiverem fora de ordem
+                        [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]];
+                        ordenado = false;
+                    }
+                }
+            }
+        }
+
+        ordenarDecrescente(numerosDesordenados);
+
+        // Exibir os números ordenados em ordem decrescente na lista
+        const ulOrdenados = document.getElementById("numeros-ordenados");
+        numerosDesordenados.forEach(numero => {
+            const li = document.createElement("li");
+            li.textContent = numero;
+            ulOrdenados.appendChild(li);
+        });
+    </script>
+</body>
+</html>

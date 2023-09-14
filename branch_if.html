@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validação de Entrada de Usuário</title>
+</head>
+<body>
+    <h1>Validação de Entrada de Usuário</h1>
+    
+    <script>
+        const usuarioRegistrado = "usuario123";
+        const senhaCorreta = "senha123";
+
+        const nomeUsuario = prompt("Digite seu nome de usuário: ");
+        const senha = prompt("Digite sua senha: ");
+
+        if (nomeUsuario === usuarioRegistrado && senha === senhaCorreta) {
+            alert("Login bem-sucedido! Bem-vindo ao aplicativo.");
+        } else {
+            alert("Nome de usuário ou senha incorretos. Tente novamente.");
+        }
+    </script>
+</body>
+</html>

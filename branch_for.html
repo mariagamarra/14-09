@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ordenação de Nomes</title>
+</head>
+<body>
+    <h1>Ordenação de Nomes</h1>
+    <p>Matriz de nomes desordenados:</p>
+    <ul id="nomes-desordenados">
+        <li>Alice</li>
+        <li>Carlos</li>
+        <li>Eva</li>
+        <li>Bob</li>
+        <li>David</li>
+    </ul>
+    
+    <p>Matriz de nomes ordenados:</p>
+    <ul id="nomes-ordenados">
+    </ul>
+
+    <script>
+        // Matriz de nomes desordenados
+        const nomesDesordenados = ["Alice", "Carlos", "Eva", "Bob", "David"];
+
+        // Ordenar os nomes em ordem alfabética
+        nomesDesordenados.sort();
+
+        // Exibir os nomes ordenados na lista de nomes ordenados
+        const ulOrdenados = document.getElementById("nomes-ordenados");
+        nomesDesordenados.forEach(nome => {
+            const li = document.createElement("li");
+            li.textContent = nome;
+            ulOrdenados.appendChild(li);
+        });
+    </script>
+</body>
+</html>
+
+</script>
+    
+</body>
+</html>
+
+

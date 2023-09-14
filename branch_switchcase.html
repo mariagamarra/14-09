@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Busca no Banco de Dados</title>
+</head>
+<body>
+    <h1>Busca no Banco de Dados</h1>
+    
+    <script>
+        // Matriz de nomes de frutas
+        const frutas = ["maçã", "banana", "abacaxi", "laranja", "morango"];
+        const palavraChave = "abacaxi";
+
+        let encontrado = false;
+
+        // Usando switch/case para buscar "abacaxi"
+        switch (palavraChave) {
+            case "abacaxi":
+                encontrado = true;
+                break;
+            default:
+                encontrado = false;
+                break;
+        }
+
+        if (encontrado) {
+            alert("Encontrou o abacaxi no banco de dados de frutas!");
+        } else {
+            alert("Não encontrou o abacaxi no banco de dados de frutas.");
+        }
+    </script>
+</body>
+</html>

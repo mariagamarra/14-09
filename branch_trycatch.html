@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Busca Personalizada no Banco de Dados</title>
+</head>
+<body>
+    <h1>Busca Personalizada no Banco de Dados</h1>
+    
+    <script>
+        // Simulando uma busca no banco de dados
+        function buscarNoBancoDeDados(palavraChave) {
+            const bancoDeDados = { "iPhone": 1000, "Samsung Galaxy": 800, "Macbook": 1500 };
+            
+            if (bancoDeDados.hasOwnProperty(palavraChave)) {
+                return bancoDeDados[palavraChave];
+            } else {
+                throw new Error("O produto não foi encontrado em nosso catálogo. Por favor, verifique o nome do produto.");
+            }
+        }
+
+        const nomeProduto = "Google Pixel";
+
+        try {
+            const preco = buscarNoBancoDeDados(nomeProduto);
+            alert(`O preço do ${nomeProduto} é $${preco}.`);
+        } catch (error) {
+            alert(error.message);
+        }
+    </script>
+</body>
+</html>
